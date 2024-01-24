@@ -3,7 +3,8 @@ import {
   ChatCircleDots,
   Gear,
   GearSix,
-  Phone,
+  Camera,
+  ChatsCircle ,
   SignOut,
   User,
   Users,
@@ -35,13 +36,17 @@ const Nav_Buttons = [
   },
   {
     index: 2,
-    icon: <Phone />,
+    icon: <Camera />,
+  },
+  {
+    index: 3,
+    icon: <ChatsCircle  />,
   },
 ];
 
 const Nav_Setting = [
   {
-    index: 3,
+    index: 4,
     icon: <GearSix />,
   },
 ];
