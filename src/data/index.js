@@ -1,10 +1,9 @@
 import { faker } from "@faker-js/faker";
 import {
-  ChatCircleDots,
   Gear,
   GearSix,
   Camera,
-  ChatsCircle ,
+  ChatsCircle,
   SignOut,
   User,
   Users,
@@ -38,7 +37,6 @@ const Nav_Buttons = [
     index: 2,
     icon: <Camera />,
   },
-  
 ];
 
 const Nav_Setting = [
