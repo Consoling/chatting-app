@@ -14,7 +14,7 @@ import { styled, alpha, useTheme } from "@mui/material/styles";
 import { CircleDashed, MagnifyingGlass, ArchiveBox } from "phosphor-react";
 import { faker } from "@faker-js/faker";
 import { ChatList } from "../../data";
-import "../../global.css";
+import "../../index.css";
 import { SimpleBarStyle } from "../../components/Scrollbar";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -180,9 +180,12 @@ const Chats = () => {
             transition: "all 0.3s",
             className: "scrollbar",
           }}
+          className= "scrollbar"
+          padding={1}
+          overflowX="hidden"
         >
-          <SimpleBarStyle timeout={500} clickOnTrack={false}>
-          <Stack spacing={2.4} padding={1}>
+          {/* <SimpleBarStyle timeout={500} clickOnTrack={false}> */}
+          <Stack spacing={2.4} >
             <Typography variant="subtitle2" sx={{ color: "#676767" }}>
               Pinned
             </Typography>
@@ -198,7 +201,7 @@ const Chats = () => {
               return <ChatElement {...el} />;
             })}
           </Stack>
-          </SimpleBarStyle>
+          {/* </SimpleBarStyle> */}
         </Stack>
       </Stack>
     </Box>
