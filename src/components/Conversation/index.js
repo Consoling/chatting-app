@@ -22,11 +22,11 @@ import {
   PaperPlaneTilt,
 } from "phosphor-react";
 
-const StyledInput = styled(TextField)(({ theme }) => ({
-  "&. MuiInputBase-input": {
-    paddingTop: "12px",
-    paddingBottom: "12px",
-  },
+const StyledInput = styled(TextField)(({theme}) => ({
+    "& .MuiInputBase-input": {
+        paddingTop: "12px",
+        paddingBottom: "12px",
+    }
 }));
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -66,7 +66,7 @@ const Conversation = () => {
         sx={{
           width: "100%",
           backgroundColor:
-            theme.palette.mode == "light"
+            theme.palette.mode === "light"
               ? "#F8FAFF"
               : theme.palette.background.paper,
           boxShadow: "0px  0px 2px rgba(0, 0, 0, 0.25)",
@@ -112,7 +112,7 @@ const Conversation = () => {
         sx={{
           width: "100%",
           backgroundColor:
-            theme.palette.mode == "light"
+            theme.palette.mode === "light"
               ? "#F8FAFF"
               : theme.palette.background.paper,
           boxShadow: "0px  0px 2px rgba(0, 0, 0, 0.25)",
