@@ -66,7 +66,7 @@ const Conversation = () => {
         sx={{
           width: "100%",
           backgroundColor:
-            theme.palette.mode == "light"
+            theme.palette.mode === "light"
               ? "#F8FAFF"
               : theme.palette.background.paper,
           boxShadow: "0px  0px 2px rgba(0, 0, 0, 0.25)",
@@ -112,7 +112,7 @@ const Conversation = () => {
         sx={{
           width: "100%",
           backgroundColor:
-            theme.palette.mode == "light"
+            theme.palette.mode === "light"
               ? "#F8FAFF"
               : theme.palette.background.paper,
           boxShadow: "0px  0px 2px rgba(0, 0, 0, 0.25)",
@@ -163,7 +163,7 @@ const Conversation = () => {
               justifyContent="center"
             >
               <IconButton>
-                <PaperPlaneTilt color="#fff"/>
+                <PaperPlaneTilt color="#fff" />
               </IconButton>
             </Stack>
           </Box>
