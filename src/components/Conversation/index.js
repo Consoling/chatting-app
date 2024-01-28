@@ -163,7 +163,7 @@ const Conversation = () => {
               justifyContent="center"
             >
               <IconButton>
-                <PaperPlaneTilt color="#fff"/>
+                <PaperPlaneTilt color="#fff" />
               </IconButton>
             </Stack>
           </Box>
