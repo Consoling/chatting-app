@@ -28,7 +28,7 @@ const Profile_Menu = [
 const Nav_Buttons = [
   {
     index: 0,
-    icon: <ChatCircleDots />,
+    icon: <ChatsCircle />,
   },
   {
     index: 1,
@@ -38,10 +38,7 @@ const Nav_Buttons = [
     index: 2,
     icon: <Camera />,
   },
-  {
-    index: 3,
-    icon: <ChatsCircle  />,
-  },
+  
 ];
 
 const Nav_Setting = [

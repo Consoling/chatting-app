@@ -10,11 +10,11 @@ import {
   Avatar,
   Badge,
 } from "@mui/material";
-import { styled, alpha } from "@mui/material/styles";
+import { styled, alpha, useTheme } from "@mui/material/styles";
 import { CircleDashed, MagnifyingGlass, ArchiveBox } from "phosphor-react";
 import { faker } from "@faker-js/faker";
 import { ChatList } from "../../data";
-import '../../global.css';
+import "../../global.css";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -46,13 +46,14 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const ChatElement = ({ id, name, image, msg, time, unread, online }) => {
+  const theme = useTheme();
   return (
     <Box
       sx={{
         width: "100%",
         // height: 60,
         borderRadius: 1,
-        backgroundColor: "#fff",
+        backgroundColor: theme.palette.mode == 'light' ? '#fff' : theme.palette.background.default,
       }}
       p={2}
     >
@@ -93,7 +94,7 @@ const ChatElement = ({ id, name, image, msg, time, unread, online }) => {
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: 20,
-  backgroundColor: alpha(theme.palette.background.paper, 1),
+  backgroundColor: alpha(theme.palette.background.default, 1),
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: "100%",
@@ -120,17 +121,21 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Chats = () => {
+  const theme = useTheme();
   return (
     <Box
       sx={{
         position: "relative",
 
         width: 320,
-        backgroundColor: "#F8FAFF",
+        backgroundColor:
+          theme.palette.mode == "light"
+            ? "#F8FAFF"
+            : theme.palette.background.paper,
         boxShadow: "0px 0px 2px rgba(0,0,0,0.25)",
       }}
     >
-      <Stack p={3} spacing={2} sx={{height: '100vh',}} className="scrollbar">
+      <Stack p={3} spacing={2} sx={{ height: "100vh" }} className="scrollbar">
         <Stack
           direction="row"
           alignItems={"center"}
@@ -160,10 +165,15 @@ const Chats = () => {
           <Divider />
         </Stack>
         <Stack
+          spacing={2}
           direction="column"
-          sx={{ flexGrow: 1, overflow: "scroll", height: "100%", transition: 'all 0.3s',  }}
+          sx={{
+            flexGrow: 1,
+            overflow: "scroll",
+            height: "100%",
+            transition: "all 0.3s",
+          }}
         >
-          
           <Stack spacing={2.4} className="scrollbar">
             <Typography variant="subtitle2" sx={{ color: "#676767" }}>
               Pinned
@@ -180,7 +190,6 @@ const Chats = () => {
               return <ChatElement {...el} />;
             })}
           </Stack>
-          
         </Stack>
       </Stack>
     </Box>
