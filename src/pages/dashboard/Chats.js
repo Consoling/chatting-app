@@ -53,7 +53,10 @@ const ChatElement = ({ id, name, image, msg, time, unread, online }) => {
         width: "100%",
         // height: 60,
         borderRadius: 1,
-        backgroundColor: theme.palette.mode == 'light' ? '#fff' : theme.palette.background.default,
+        backgroundColor:
+          theme.palette.mode == "light"
+            ? "#fff"
+            : theme.palette.background.default,
       }}
       p={2}
     >
@@ -135,7 +138,7 @@ const Chats = () => {
         boxShadow: "0px 0px 2px rgba(0,0,0,0.25)",
       }}
     >
-      <Stack p={3} spacing={2} sx={{ height: "100vh" }} className="scrollbar">
+      <Stack p={3} spacing={2} sx={{ height: "100vh" }}>
         <Stack
           direction="row"
           alignItems={"center"}
@@ -164,6 +167,7 @@ const Chats = () => {
           </Stack>
           <Divider />
         </Stack>
+
         <Stack
           spacing={2}
           direction="column"
@@ -172,9 +176,10 @@ const Chats = () => {
             overflow: "scroll",
             height: "100%",
             transition: "all 0.3s",
+            className: "scrollbar",
           }}
         >
-          <Stack spacing={2.4} className="scrollbar">
+          <Stack spacing={2.4} >
             <Typography variant="subtitle2" sx={{ color: "#676767" }}>
               Pinned
             </Typography>
