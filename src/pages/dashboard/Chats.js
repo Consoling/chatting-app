@@ -14,8 +14,8 @@ import { styled, alpha, useTheme } from "@mui/material/styles";
 import { CircleDashed, MagnifyingGlass, ArchiveBox } from "phosphor-react";
 import { faker } from "@faker-js/faker";
 import { ChatList } from "../../data";
+
 import "../../index.css";
-import { SimpleBarStyle } from "../../components/Scrollbar";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -54,11 +54,11 @@ const ChatElement = ({ id, name, image, msg, time, unread, online }) => {
         width: "100%",
         // height: 60,
         borderRadius: 1,
+
         backgroundColor:
           theme.palette.mode === "light"
             ? "#fff"
             : theme.palette.background.default,
-        backgroundColor: theme.palette.mode == 'light' ? '#fff' : theme.palette.background.default,
       }}
       p={2}
     >
@@ -134,7 +134,7 @@ const Chats = () => {
 
         width: 320,
         backgroundColor:
-          theme.palette.mode == "light"
+          theme.palette.mode === "light"
             ? "#F8FAFF"
             : theme.palette.background.paper,
         boxShadow: "0px 0px 2px rgba(0,0,0,0.25)",
@@ -180,12 +180,12 @@ const Chats = () => {
             transition: "all 0.3s",
             className: "scrollbar",
           }}
-          className= "scrollbar"
+          className="scrollbar"
           padding={1}
           overflowX="hidden"
         >
           {/* <SimpleBarStyle timeout={500} clickOnTrack={false}> */}
-          <Stack spacing={2.4} >
+          <Stack spacing={2.4}>
             <Typography variant="subtitle2" sx={{ color: "#676767" }}>
               Pinned
             </Typography>
