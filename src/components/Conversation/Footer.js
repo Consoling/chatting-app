@@ -49,13 +49,6 @@ const Footer = () => {
                 </IconButton>
               </InputAdornment>
             ),
-            endAdornment: (
-              <InputAdornment>
-                <IconButton>
-                  <Smiley />
-                </IconButton>
-              </InputAdornment>
-            ),
           }}
         />
         <Box
