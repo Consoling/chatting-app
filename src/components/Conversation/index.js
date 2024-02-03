@@ -21,7 +21,7 @@ const Conversation = () => {
           className: "scrollbar",
         }}
       >
-        <Message />
+        <Message menu={true} />
       </Box>
       <Footer />
     </Stack>
